@@ -1,0 +1,88 @@
+.taskWrapper {
+  width: 100%;
+  background: var(--gray-500);
+  padding: 1rem;
+  border: 1px solid var(--gray-400);
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.taskWrapperChecked {
+  width: 100%;
+  background: var(--gray-500);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.6;
+
+}
+
+.taskBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.taskBox p {
+  font-size: 0.875rem;
+  line-height: 1.18rem;
+  color: var(--gray-100);
+  margin-right: auto;
+  align-items: flex-start;
+
+  width: 37rem;
+  word-wrap: break-word;
+  
+}
+
+.taskBox input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.15em;
+  border: 0.15em solid var(--blue);
+  border-radius: 50%;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: 0.875s;
+
+  top: 1.5px;
+}
+
+.taskBox input[type="checkbox"]:checked::before {
+  content: "\2714";
+  font-size: 0.5rem;
+  color: var(--white);
+  position: absolute;
+  right: 4px;
+  top: 2px;
+}
+
+.taskBox input[type="checkbox"]:checked {
+  background-color: var(--purple-Dark);
+  border: var(--purple-Dark);
+  color: var(--white);
+}
+
+.taskBox input[type="checkbox"]:checked + p {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.taskBox button {
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  color: var(--gray-300);
+  cursor: pointer;
+
+  display: flex;
+}
+
+.taskBox button:hover {
+  color: var(--red-500);
+}
